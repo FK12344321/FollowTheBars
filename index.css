@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.image-container {
+    max-width: 100%;
+    text-align: center; /* Center the image horizontally */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
