@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <title>Responsive Image</title>
+    <meta charset="UTF-8">
+    <title>العد التنازلي والتوجيه</title>
     <style>
+        /* Style for the container div */
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Set the body's height to the viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Hide horizontal scrollbar if needed */
+            height: 100vh; /* Set the body's height to the viewport height */
+            margin: 0;
         }
 
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
+        #countdown {
+            font-size: 48px;
+            color: red;
         }
     </style>
 </head>
 <body>
-    <img src="logo.jpg" alt="Description of the image">
+    <div id="countdown"></div>
+
+    <script>
+
+        var countdownDuration = 5; 
+
+        function updateCountdown() {
+            var countdownElement = document.getElementById('countdown');
+            countdownElement.innerHTML = 'جاري التوجيه في ' + countdownDuration;
+            countdownDuration--;
+
+            if (countdownDuration < 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'logo.html'; 
+            }
+        }
+
+    
+        updateCountdown();
+
+        // تحديث العد التنازلي كل ثانية
+        var countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
