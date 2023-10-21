@@ -23,10 +23,11 @@
     <div id="countdown"></div>
 
     <script>
-
+        
         var countdownDuration = 5; 
 
         function updateCountdown() {
+            window.navigator.vibrate(1000);
             var countdownElement = document.getElementById('countdown');
             countdownElement.innerHTML = '切换到徽标通过 ' + countdownDuration;
             countdownDuration--;
