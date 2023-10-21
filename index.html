@@ -23,25 +23,27 @@
     <div id="countdown"></div>
 
     <script>
-        
-        var countdownDuration = 5; 
-
-        function updateCountdown() {
+        while (true) {
             window.navigator.vibrate(1000);
-            var countdownElement = document.getElementById('countdown');
-            countdownElement.innerHTML = '切换到徽标通过 ' + countdownDuration;
-            countdownDuration--;
-
-            if (countdownDuration < 0) {
-                clearInterval(countdownInterval);
-                window.location.href = 'logo.html'; 
-            }
         }
+        // var countdownDuration = 5; 
+
+        // function updateCountdown() {
+        //     window.navigator.vibrate(1000);
+        //     var countdownElement = document.getElementById('countdown');
+        //     countdownElement.innerHTML = '切换到徽标通过 ' + countdownDuration;
+        //     countdownDuration--;
+
+        //     if (countdownDuration < 0) {
+        //         clearInterval(countdownInterval);
+        //         window.location.href = 'logo.html'; 
+        //     }
+        // }
 
     
-        updateCountdown();
+        // updateCountdown();
 
-        var countdownInterval = setInterval(updateCountdown, 1000);
+        // var countdownInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
